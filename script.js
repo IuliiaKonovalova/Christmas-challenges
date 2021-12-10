@@ -91,4 +91,60 @@ giftPyramid(numberOfGifts)
 
 /*
 
-4. */
+4. 
+
+Help Santa to find most valuable gift
+
+*/
+
+const listKids = [{
+    name: 'Sarah',
+    gift: 'Puzzles',
+    price: 20
+  },
+  {
+    name: 'Tim',
+    gift: 'Lego set',
+    price: 120
+  },
+  {
+    name: 'Joanna',
+    gift: 'Doll',
+    price: 35
+  },
+  {
+    name: 'William',
+    gift: 'Car',
+    price: 55
+  }
+
+]
+
+let pricesArray = []
+
+for (let i of listKids) {
+
+  pricesArray.push(i.price)
+}
+console.log(Math.max(...pricesArray))
+
+function drawTree(h) {
+  for (var i = 0; i <= h; i++) {
+    var star = '';
+    //Changed to start high then decrease
+    for (var k = 1; k <= h - i; k++) {
+      //shortened to one space
+      star += " ";
+    };
+    for (var j = 0; j <= i; j++) {
+      //Added space so there is an odd number
+      //of symbols and the star above fits
+      //the space
+      star += " *";
+    };
+    //Moved into the loop
+    console.log(star);
+  };
+};
+
+drawTree(5);
