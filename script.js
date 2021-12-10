@@ -156,3 +156,13 @@ function ChristmasTree(number) {
 };
 
 ChristmasTree(5);
+
+/*
+
+6. Help Santa to figure out what kind of message he got for Christmas
+
+*/
+
+message = 'äÄçÇéÉêMçÇéÉerçÇéÉrþyú ChrþúiçÇéÉstçÇéÉmasçÇéÉ!ÖÐçÇéÉþúÚ'
+const cleanMessage = str => str.replace(/[^\x20-\x7E]/g, '');
+console.log(cleanMessage(message));
