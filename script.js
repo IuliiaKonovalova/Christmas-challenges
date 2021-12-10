@@ -128,23 +128,31 @@ for (let i of listKids) {
 }
 console.log(Math.max(...pricesArray))
 
-function drawTree(h) {
-  for (var i = 0; i <= h; i++) {
-    var star = '';
-    //Changed to start high then decrease
-    for (var k = 1; k <= h - i; k++) {
-      //shortened to one space
-      star += " ";
+/*
+
+5. 
+
+Help Santa to build set a Christmas tree:
+       *
+      * *
+     * * *
+    * * * *
+   * * * * *
+  * * * * * *
+
+*/
+
+function ChristmasTree(number) {
+  for (let i = 0; i <= number; i++) {
+    let tree = '';
+    for (let spaceBefore = 0; spaceBefore <= number - i; spaceBefore++) {
+      tree += " ";
     };
-    for (var j = 0; j <= i; j++) {
-      //Added space so there is an odd number
-      //of symbols and the star above fits
-      //the space
-      star += " *";
+    for (var stars = 0; stars <= i; stars++) {
+      tree += " *";
     };
-    //Moved into the loop
-    console.log(star);
+    console.log(tree);
   };
 };
 
-drawTree(5);
+ChristmasTree(5);
