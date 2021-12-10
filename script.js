@@ -29,22 +29,34 @@ console.log(deer)
 
 # 2
 
+Santa messed up a bit with his computer and the list of children's names became a one
+whole word. Help Santa to make the list readable again for Santa
 
+1. You are given a string where each name starts with the upper case letter.
+2. create a function splitString that takes 1 argument: string
+3. Inside the function: 
+  1) Create sting names using let variable.
+  2) Using for of loop, loop through the string.
+  3) Using if else statement, check whether the char is upper case letter.
+  If it is, add it to the names string with the single space before this char.
+  If not, simply add this char to the names string
+  4) Function should return names
+4. console.log splitString function using kids string as an argument.
 
 */
 
-kids = ['Jane', 'Daisy', 'Mike', 'Sunny', 'Richard'];
-gifts = ['doll', 'Lego set', 'car', 'puzzles', 'book'];
-address = ['address1', 'address2', 'address3', 'address4', 'address5'];
+kids = 'JaneDaisyMikeSunnyRichardSusanDan';
 
-const kid1 = {};
-const kid2 = {};
-const kid3 = {};
-const kid4 = {};
-const kid5 = {};
-
-function (kids, gifts, address) {
-  for (let i of kids.length) {
-
+function splitString(string) {
+  let names = ''
+  for (let char of string) {
+    if (char === char.toUpperCase()) {
+      names += ` ${char}`
+    } else {
+      names += char
+    }
   }
+  return names
 }
+
+console.log(splitString(kids))
