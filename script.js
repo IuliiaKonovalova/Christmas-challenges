@@ -60,3 +60,35 @@ function splitString(string) {
 }
 
 console.log(splitString(kids))
+
+/*
+
+3. 
+
+Help Santa to organize all his gift in a pyramid.
+It should return
+[
+  [ 'S' ],
+  [ 'S', 'S' ],
+  [ 'S', 'S', 'S' ],
+  [ 'S', 'S', 'S', 'S' ],
+  [ 'S', 'S', 'S', 'S', 'S' ],
+  [ 'S', 'S', 'S', 'S', 'S', 'S' ]
+]
+
+*/
+
+numberOfGifts = 6
+
+function giftPyramid(n) {
+  let result = Array.from({
+    length: n
+  }, (x, i) => Array(i + 1).fill('S', 0))
+  console.log(result)
+}
+
+giftPyramid(numberOfGifts)
+
+/*
+
+4. */
