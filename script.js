@@ -1,4 +1,5 @@
 /*
+
 # 1
 
 1. You are given an array of names.
@@ -25,8 +26,25 @@ console.log(santa)
 console.log(deer)
 
 /*
+
 # 2
 
 
 
 */
+
+kids = ['Jane', 'Daisy', 'Mike', 'Sunny', 'Richard'];
+gifts = ['doll', 'Lego set', 'car', 'puzzles', 'book'];
+address = ['address1', 'address2', 'address3', 'address4', 'address5'];
+
+const kid1 = {};
+const kid2 = {};
+const kid3 = {};
+const kid4 = {};
+const kid5 = {};
+
+function (kids, gifts, address) {
+  for (let i of kids.length) {
+
+  }
+}
