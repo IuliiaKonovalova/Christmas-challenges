@@ -7,23 +7,28 @@
 3. Using for of loop, loop through the array.
 4. Add if else statement inside the loop find 'Santa Claus' and assign it to the variable Santa.
 After that using push method add the rest of the names to the deer arr.
-5. Console log santa variable
-6. Console log deer variable
+5. Return the following:
+
+Leader: Santa Claus
+Deers: Prancer,Dasher,Vixen,Comet,Cupid,Donner,Blitzen,Rudolph
 
 */
 arr = ['Prancer', 'Dasher', 'Vixen', 'Comet', 'Cupid', 'Santa Claus', 'Donner', 'Blitzen', 'Rudolph']
 
-let santa
-let deer = []
-for (let i of arr) {
-  if (i === 'Santa Claus') {
-    santa = i
-  } else {
-    deer.push(i)
+function getSantaDeer(arr) {
+  let santa
+  let deer = []
+  for (let i of arr) {
+    if (i === 'Santa Claus') {
+      santa = i
+    } else {
+      deer.push(i)
+    }
   }
+  return `Leader: ${santa}\nDeers: ${deer}`
+
 }
-console.log(santa)
-console.log(deer)
+console.log(getSantaDeer(arr))
 
 /*
 
@@ -59,7 +64,7 @@ function splitString(string) {
   return names
 }
 
-console.log(splitString(kids))
+splitString(kids)
 
 /*
 
@@ -84,7 +89,7 @@ function giftPyramid(n) {
   let result = Array.from({
     length: n
   }, (x, i) => Array(i + 1).fill('S', 0))
-  console.log(result)
+  return result
 }
 
 giftPyramid(numberOfGifts)
@@ -120,13 +125,14 @@ const listKids = [{
 
 ]
 
-let pricesArray = []
-
-for (let i of listKids) {
-
-  pricesArray.push(i.price)
+function getHighestPrice() {
+  let pricesArray = []
+  for (let i of listKids) {
+    pricesArray.push(i.price);
+  }
+  return Math.max(...pricesArray);
 }
-console.log(Math.max(...pricesArray))
+
 
 /*
 
@@ -151,7 +157,7 @@ function ChristmasTree(number) {
     for (var stars = 0; stars <= i; stars++) {
       tree += " *";
     };
-    console.log(tree);
+    return tree;
   };
 };
 
@@ -164,5 +170,10 @@ ChristmasTree(5);
 */
 
 message = 'äÄçÇéÉêMçÇéÉerçÇéÉrþyú ChrþúiçÇéÉstçÇéÉmasçÇéÉ!ÖÐçÇéÉþúÚ'
-const cleanMessage = str => str.replace(/[^\x20-\x7E]/g, '');
-console.log(cleanMessage(message));
+
+function cleanMessage(str) {
+  newStr = str.replace(/[^\x20-\x7E]/g, '');
+  return newStr
+}
+
+cleanMessage(message);
