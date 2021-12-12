@@ -204,9 +204,42 @@ function arrangeBalls(arr) {
       yellowBalls.push(i)
     }
   }
-  return `We have ${redBalls.length} red balls, ${blueBalls.length} blue balls, ${yellowBalls.length} yellow balls.`
+  let message = `We have ${redBalls.length} red balls, ${blueBalls.length} blue balls, ${yellowBalls.length} yellow balls.`
+  return message
 }
 
 console.log(arrangeBalls(arrBalls))
 console.log(arrangeBalls(arrBalls2))
 console.log(arrangeBalls(arrBalls3))
+
+/*
+8.
+
+
+*/
+
+function congratulateStranger(stranger) {
+  class Human {
+    constructor(name) {
+      this.name = name
+    }
+    congratulations() {
+      return `${this.name.charAt(0).toUpperCase() + this.name.slice(1)}, Merry Christmas!`
+    }
+  }
+
+  let person = new Human(stranger)
+  return person.congratulations()
+}
+
+console.log(congratulateStranger('Cat'))
+
+
+// Jingle Bells, Jingle Bells,
+// Jingle all the way!
+// Oh, What fun it is to ride
+// In a one horse open sleigh.
+// Jingle Bells, Jingle Bells,
+// Jingle all the way!
+// Oh, What fun it is to ride
+// In a one horse open sleigh.
