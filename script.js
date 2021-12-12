@@ -180,17 +180,22 @@ cleanMessage(message);
 
 /*
 
-7. Help Santa to figure out what kind of message he got for Christmas
+7. Elves has to count how many balls of each color they have to decorate their Christmas tree.
+They know that they have only red, blue, and yellow balls.
+Count how many balls they have got.
+And help them to send a message to Santa: "We have ... red balls, ... blue balls, ... yellow balls."
 
 */
 
 arrBalls = ['red', 'blue', 'yellow', 'blue', 'red', 'blue', 'red', 'blue', 'yellow', 'red', 'yellow', 'blue', 'red', 'red', 'blue', 'yellow', 'yellow', 'red', 'red'];
+arrBalls2 = ['red', 'blue', 'yellow', 'blue', 'red', 'blue', 'red', 'blue'];
+arrBalls3 = ['red'];
 
 function arrangeBalls(arr) {
   let redBalls = [];
   let blueBalls = [];
   let yellowBalls = [];
-  for (let i of arrBalls) {
+  for (let i of arr) {
     if (i === 'red') {
       redBalls.push(i)
     } else if (i === 'blue') {
@@ -199,8 +204,9 @@ function arrangeBalls(arr) {
       yellowBalls.push(i)
     }
   }
-  return `Santa has ${redBalls.length} red balls, ${blueBalls.length} blue balls, ${yellowBalls.length} yellow balls,`
-
+  return `We have ${redBalls.length} red balls, ${blueBalls.length} blue balls, ${yellowBalls.length} yellow balls.`
 }
 
 console.log(arrangeBalls(arrBalls))
+console.log(arrangeBalls(arrBalls2))
+console.log(arrangeBalls(arrBalls3))
