@@ -177,3 +177,30 @@ function cleanMessage(str) {
 }
 
 cleanMessage(message);
+
+/*
+
+7. Help Santa to figure out what kind of message he got for Christmas
+
+*/
+
+arrBalls = ['red', 'blue', 'yellow', 'blue', 'red', 'blue', 'red', 'blue', 'yellow', 'red', 'yellow', 'blue', 'red', 'red', 'blue', 'yellow', 'yellow', 'red', 'red'];
+
+function arrangeBalls(arr) {
+  let redBalls = [];
+  let blueBalls = [];
+  let yellowBalls = [];
+  for (let i of arrBalls) {
+    if (i === 'red') {
+      redBalls.push(i)
+    } else if (i === 'blue') {
+      blueBalls.push(i)
+    } else if (i === 'yellow') {
+      yellowBalls.push(i)
+    }
+  }
+  return `Santa has ${redBalls.length} red balls, ${blueBalls.length} blue balls, ${yellowBalls.length} yellow balls,`
+
+}
+
+console.log(arrangeBalls(arrBalls))
