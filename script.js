@@ -236,6 +236,66 @@ function congratulateStranger(stranger) {
 console.log(congratulateStranger('Cat'))
 
 
+/*
+9.
+
+*/
+
+const elvesPhoneBook = [{
+    name: 'Sugarplum Mary',
+    phoneNumber: '077 2027 8159',
+  },
+  {
+    name: 'Shinny Upatree',
+    phoneNumber: '079 1122 0940',
+  },
+  {
+    name: 'Pepper Minstix',
+    phoneNumber: '079 5957 0940',
+    price: 35
+  },
+  {
+    name: 'Bushy Evergreen',
+    phoneNumber: '079 0940 5957',
+    price: 55
+  },
+  {
+    name: 'Alabaster Snowball',
+    phoneNumber: '078 4772 1332',
+    price: 55
+  },
+  {
+    name: 'Wunorse Openslae',
+    phoneNumber: '078 4772 5555',
+    price: 55
+  }
+
+]
+
+//6
+elves = ['Sugarplum Mary', 'Shinny Upatree', 'pepper Minstix', 'Bushy Evergreen', 'Alabaster Snowball', 'Wunorse Openslae', ]
+
+tasks = ['make cars', 'ring bells', 'make dolls', 'decorate Christmas tree', 'clean rooms', 'write carols']
+
+// function arrangeTasks(elves, tasks) {
+//   let tasksAssign = []
+//   for (let elf of elves) {
+//     let elfTask = []
+//     elfTask.push(elf)
+
+//   }
+//   for (let i of tasks) {
+//     let task = []
+//     console.log(i)
+//     console.log(tasks[i])
+//     task.push(tasks[i])
+//     elfTask.push(task)
+//   }
+//   tasksAssign.push(elfTask)
+//   return tasksAssign
+// }
+
+// console.log(arrangeTasks(elves, tasks))
 // Jingle Bells, Jingle Bells,
 // Jingle all the way!
 // Oh, What fun it is to ride
@@ -244,3 +304,17 @@ console.log(congratulateStranger('Cat'))
 // Jingle all the way!
 // Oh, What fun it is to ride
 // In a one horse open sleigh.
+
+function arrangeElves(elves) {
+  elves.sort()
+  let elvesUpper = []
+  for (let elf of elves) {
+    let elfUpper = ''
+    elfUpper = elf.toUpperCase()
+    elvesUpper.push(elfUpper)
+  }
+
+  return elvesUpper
+}
+
+console.log(arrangeElves(elves))
