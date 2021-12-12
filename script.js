@@ -224,12 +224,13 @@ function congratulateStranger(stranger) {
       this.name = name
     }
     congratulations() {
-      return `${this.name.charAt(0).toUpperCase() + this.name.slice(1)}, Merry Christmas!`
+      return `Dear ${this.name[0].toUpperCase() + this.name.slice(1)}, Merry Christmas!`
     }
   }
 
   let person = new Human(stranger)
-  return person.congratulations()
+  let mess = person.congratulations()
+  return mess
 }
 
 console.log(congratulateStranger('Cat'))
