@@ -317,4 +317,17 @@ function arrangeElves(elves) {
   return elvesUpper
 }
 
-console.log(arrangeElves(elves))
+// console.log(arrangeElves(elves))
+
+x1 = 2;
+x2 = 3
+y1 = 3
+y2 = 8
+
+function countsth(x1, y1, x2, y2) {
+  const lx = x1 - x2;
+  const ly = y1 - y2;
+  return Math.sqrt(lx * lx + ly * ly);
+}
+
+console.log(countsth(x1, y1, x2, y2))
